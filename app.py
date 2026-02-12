@@ -8,7 +8,6 @@ y = 10
 def hello_world():
     global x
     global y
-    
     return str(x) + " " + str(y)
 
 
@@ -35,4 +34,4 @@ def down():
     global x
     global y
     y+=1
-    return str(x) + " " + str(y) + '''\n<a href="{{ url_for('/right') }}">Go</a>'''
+    return str(x) + " " + str(y) + '''\n<a href="down">down</a>'''
