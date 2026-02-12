@@ -3,6 +3,7 @@ app = Flask(__name__)
 x = 10
 y = 10
 
+
 @app.route('/')
 def hello_world():
     global x
@@ -12,25 +13,25 @@ def hello_world():
 
 
 @app.route('/left')
-def hello_world():
+def left():
     global x
     global y
     x-=1
     return str(x) + " " + str(y)
 @app.route('/right')
-def hello_world():
+def right():
     global x
     global y
     x+=1
     return str(x) + " " + str(y)
 @app.route('/up')
-def hello_world():
+def up():
     global x
     global y
     y-=1
     return str(x) + " " + str(y)
 @app.route('/down')
-def hello_world():
+def down():
     global x
     global y
     y+=1
