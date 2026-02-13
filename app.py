@@ -32,7 +32,7 @@ def right():
 def up():
     global x
     global y
-    html = ""
+    html = baseHTML()
     y-=1
     return html
 @app.route('/down')
