@@ -1,9 +1,9 @@
 from flask import Flask
 app = Flask(__name__)
-x = 50
-y = 50
-maxX = 100
-maxY = 100
+x = 10
+y = 10
+maxX = 20
+maxY = 20
 minX = 0
 minY = 0
 
@@ -19,7 +19,7 @@ def map():
         if y == i:
             out += ("O"*(x-1))+"@"+("O"*(maxX-x))+"<br>"
         else:
-            out += "O"*maxX
+            out += "O"*maxX + "<br>"
     return out
 
 def baseHTML():
