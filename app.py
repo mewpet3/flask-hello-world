@@ -17,7 +17,7 @@ def map():
     out = "<br>"
     for i in range(maxY):
         if y == i:
-            out += ("O"*x-1)+"@"+("O"*maxX-x)+"<br>"
+            out += ("O"*(x-1))+"@"+("O"*(maxX-x))+"<br>"
         else:
             out += "O"*maxX
     return out
