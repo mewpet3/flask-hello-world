@@ -1,10 +1,27 @@
 from flask import Flask
 app = Flask(__name__)
-x = 10
-y = 10
+x = 50
+y = 50
+maxX = 100
+maxY = 100
+minX = 0
+minY = 0
+
+#class Player:   
+
+def map():
+    global x
+    global y
+    out = "<br>"
+    for i in range(maxY):
+        if y == i:
+            out += ("O"*x-1)+"@"+("O"*maxX-x)+"<br>"
+        else:
+            out += "O"*maxX
+    return out
 
 def baseHTML():
-    return str(x) + " " + str(y) + '''\n<a href="up">up</a>\n<a href="down">down</a>\n<a href="left">left</a>\n<a href="right">right</a>'''
+    return "X - " + str(x) + "<br>Y - " + str(y) + f'''{map()}<br><a href="up">up</a><br><a href="left">left</a><a href="down">down</a><a href="right">right</a>'''
 
 @app.route('/')
 def hello_world():
