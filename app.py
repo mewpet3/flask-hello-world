@@ -12,6 +12,8 @@ minY = 0
 def map():
     global x
     global y
+    global maxX
+    global maxY
     out = "<br>"
     for i in range(maxY):
         if y == i:
